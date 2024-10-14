@@ -2,7 +2,7 @@ import socket
 import threading
 
 # Contador de conexões ativas
-connections = 0
+connections = 1
 lock = threading.Lock()
 
 def handle_client(client_socket, client_address):
@@ -27,7 +27,7 @@ def handle_client(client_socket, client_address):
 
 def server():
     server_ip = '0.0.0.0'
-    server_port = 8080
+    server_port = 8088
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_socket.bind((server_ip, server_port))
     server_socket.listen(5)
