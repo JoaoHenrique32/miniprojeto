@@ -2,7 +2,7 @@ import socket
 import threading
 
 # Contador de conexões ativas
-connections = 1
+connections = 0
 lock = threading.Lock()
 
 def handle_client(client_socket, client_address):
