@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service NotificationService {
+  rpc NotifyCompletion (CompletionRequest) returns (CompletionResponse);
+}
+
+message CompletionRequest {
+  string client_id = 1;
+  string message = 2;
+}
+
+message CompletionResponse {
+  string status = 1;
+}
